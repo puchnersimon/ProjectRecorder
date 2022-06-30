@@ -13,6 +13,7 @@ struct ProjectsView: View {
     @ObservedObject var timerManager = TimerManager()
     
     @State var projectname = ""
+    @State var recordingTime = ""
     @State var recordingDescription = ""
     
     var body: some View {
@@ -58,13 +59,14 @@ struct ProjectsView: View {
                                     .onTapGesture {
                                         viewModel.toggleRecording(id: project.id)
                                         
-                                        
                                         //start recording - stop recording !! converted --> project from ForEach could not change isRecording-status !!
                                         if (project.isRecording == false) {
                                             timerManager.timerStart()
                                         } else {
+                                            recordingTime = String(format: "%02d:%02d:%02d", timerManager.hours, timerManager.minutes, timerManager.seconds)
                                             timerManager.timerStop()
                                             saveRecordingAlert(id: project.id)
+                                            
                                         }
                                     }
                                 if (project.isRecording == true) {
@@ -130,6 +132,8 @@ struct ProjectsView: View {
         let save = UIAlertAction(title: "Save", style: .default) { (_) in
             recordingDescription = alert.textFields![0].text!
             print(recordingDescription)
+            print(recordingTime)
+            viewModel.saveRecoding(id: id, recTime: recordingTime, description: recordingDescription)
             //viewModel.addProject(projectname: projectname)
         }
         

@@ -39,8 +39,23 @@ class ProjectViewModel: ObservableObject {
         }
     }
     
-    func saveRecoding(id: UUID) {
-        
+    func saveRecoding(id: UUID, recTime: String, description: String) {
+        for (index, project) in projects.enumerated() {
+            if project.id == id {
+                
+                let hours: Double? = Double(recTime.prefix(2))
+                let  minutesString = recTime.prefix(5)
+                let  minutes: Double? = Double(minutesString.suffix(2))
+                let seconds: Double? = Double(recTime.suffix(2))
+                
+                let recordedTimeInSeconds = (hours ?? 0.0) * 60.0 + (minutes ?? 0.0) * 60.0 + (seconds ?? 0.0)
+                
+                
+                projects[index].recordingList.append(ProjectRecordingData(date: Date.now, timeStart: Date.now, recordingTime: recordedTimeInSeconds, description: description))
+                print(projects[index].recordingList)
+                
+            }
+        }
     }
     
 }
