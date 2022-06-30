@@ -18,23 +18,23 @@ struct ProjectsView: View {
         NavigationView {
             VStack {
                 /*
-                Section {
-                    TextField("create new project...", text: $projectname)
-                        .padding()
-                        .multilineTextAlignment(.center)
-                        .frame(width: 350, height: 50, alignment: .center)
-                    
-                    Button {
-                        viewModel.addProject(projectname: projectname)
-                        projectname = ""
-                    } label: {
-                        Text("add project")
-                            .frame(width: 130, height: 35, alignment: .center)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                    }
-                }
+                 Section {
+                 TextField("create new project...", text: $projectname)
+                 .padding()
+                 .multilineTextAlignment(.center)
+                 .frame(width: 350, height: 50, alignment: .center)
+                 
+                 Button {
+                 viewModel.addProject(projectname: projectname)
+                 projectname = ""
+                 } label: {
+                 Text("add project")
+                 .frame(width: 130, height: 35, alignment: .center)
+                 .background(.blue)
+                 .foregroundColor(.white)
+                 .cornerRadius(8)
+                 }
+                 }
                  */
                 
                 List {
@@ -42,25 +42,28 @@ struct ProjectsView: View {
                         
                         HStack {
                             Label {
-                                Text(project.ProjectName)
+                                Text(project.projectName)
                                     .font(.title)
                             } icon: {
+                                //Image
                                 project.symbol
                             }
                             
                             Spacer()
                             VStack {
-                            Image(systemName: project.isRecording ? "stop.circle.fill" : "play.circle.fill")
-                                .foregroundColor(project.isRecording ? .red : .green)
-                                .frame(width: 40, height: 40, alignment: .center)
-                                .onTapGesture {
-                                    viewModel.toggleRecording(id: project.id)
-                                    if (project.isRecording == true) {
-                                        timerManager.timerStart()
+                                Image(systemName: project.isRecording ? "stop.circle.fill" : "play.circle.fill")
+                                    .foregroundColor(project.isRecording ? .red : .green)
+                                    .frame(width: 40, height: 40, alignment: .center)
+                                    .onTapGesture {
+                                        viewModel.toggleRecording(id: project.id)
+                                        if (project.isRecording == true) {
+                                            timerManager.timerStart()
+                                        }
                                     }
-                                }
-                                Text(String(format: "%.2f", timerManager.secondElapsed))
+                                if (project.isRecording == true) {
+                                    Text(String(format: "%02d:%02d:%02d", timerManager.hours, timerManager.minutes, timerManager.seconds))
                                     .foregroundColor(.gray)
+                                }
                             }
                             .padding(.trailing, 10)
                         }

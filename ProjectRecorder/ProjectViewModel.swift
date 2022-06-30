@@ -9,10 +9,10 @@ import SwiftUI
 
 class ProjectViewModel: ObservableObject {
     @Published var projects: [Project] = [
-        Project(ProjectName: "IOS", symbol: Image(systemName: "applelogo")),
-        Project(ProjectName: "WIA", symbol: Image(systemName: "list.dash")),
-        Project(ProjectName: "OIS", symbol: Image(systemName: "map")),
-        Project(ProjectName: "HNP", symbol: Image(systemName: "hand.thumbsdown"))
+        Project(projectName: "IOS", symbol: Image(systemName: "applelogo")),
+        Project(projectName: "WIA", symbol: Image(systemName: "list.dash")),
+        Project(projectName: "OIS", symbol: Image(systemName: "map")),
+        Project(projectName: "HNP", symbol: Image(systemName: "hand.thumbsdown"))
     ]
     
     
@@ -23,7 +23,7 @@ class ProjectViewModel: ObservableObject {
         guard !projectname.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        projects.append(Project(ProjectName: projectname))
+        projects.append(Project(projectName: projectname))
     }
     
     

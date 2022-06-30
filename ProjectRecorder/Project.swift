@@ -9,18 +9,18 @@ import SwiftUI
 
 struct Project: Identifiable {
     let id = UUID()
-    var ProjectName: String
+    var projectName: String
     var symbol: Image? = nil
-    var timeList: [Timer] = []
-    var FullTime = 0
+    var recordingList: [Timer] = []
+    var fullRecordingTime = 0
     var isRecording = false
     
-    init(ProjectName: String) {
-        self.ProjectName = ProjectName
+    init(projectName: String) {
+        self.projectName = projectName
     }
     
-    init(ProjectName: String, symbol: Image) {
-        self.ProjectName = ProjectName
+    init(projectName: String, symbol: Image) {
+        self.projectName = projectName
         self.symbol = symbol
     }
 }

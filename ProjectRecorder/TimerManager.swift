@@ -8,12 +8,24 @@
 import SwiftUI
 
 class TimerManager: ObservableObject {
-    @Published var secondElapsed = 0.9
+    @Published var seconds = 0
+    @Published var minutes = 0
+    @Published var hours = 0
     var timer = Timer()
     
     func timerStart() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-            self.secondElapsed += 0.1
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.seconds += 1
+            
+            if (self.seconds == 60) {
+                self.minutes += 1
+                self.seconds = 0
+            }
+            
+            if (self.minutes == 60) {
+                self.hours += 1
+                self.minutes = 0
+            }
         }
     }
 }
