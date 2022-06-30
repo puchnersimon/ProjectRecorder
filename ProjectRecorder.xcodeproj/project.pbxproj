@@ -10,6 +10,7 @@
 		F448FB20286DDCCB00AEB2BA /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448FB1F286DDCCB00AEB2BA /* TimerManager.swift */; };
 		F448FB22286DE1B500AEB2BA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448FB21286DE1B500AEB2BA /* CalendarView.swift */; };
 		F448FB24286DE1D400AEB2BA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448FB23286DE1D400AEB2BA /* StatisticsView.swift */; };
+		F4D31F29286E2DBE0011B4F9 /* StatisticsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D31F28286E2DBE0011B4F9 /* StatisticsDetailView.swift */; };
 		F4FE4A89286DA6260005012D /* ProjectRecorderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4A88286DA6260005012D /* ProjectRecorderApp.swift */; };
 		F4FE4A8B286DA6260005012D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4A8A286DA6260005012D /* ContentView.swift */; };
 		F4FE4A8D286DA6280005012D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FE4A8C286DA6280005012D /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		F448FB1F286DDCCB00AEB2BA /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		F448FB21286DE1B500AEB2BA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		F448FB23286DE1D400AEB2BA /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		F4D31F28286E2DBE0011B4F9 /* StatisticsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDetailView.swift; sourceTree = "<group>"; };
 		F4FE4A85286DA6260005012D /* ProjectRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FE4A88286DA6260005012D /* ProjectRecorderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRecorderApp.swift; sourceTree = "<group>"; };
 		F4FE4A8A286DA6260005012D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4D31F2A286E2FB30011B4F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4FE4AB7286DA71B0005012D /* ProjectsView.swift */,
+				F448FB21286DE1B500AEB2BA /* CalendarView.swift */,
+				F448FB23286DE1D400AEB2BA /* StatisticsView.swift */,
+				F4D31F28286E2DBE0011B4F9 /* StatisticsDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4D31F2B286E2FBE0011B4F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4FE4AB9286DABE90005012D /* Project.swift */,
+				F448FB1F286DDCCB00AEB2BA /* TimerManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4D31F2C286E2FF50011B4F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4FE4ABB286DB3C20005012D /* ProjectViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		F4FE4A7C286DA6260005012D = {
 			isa = PBXGroup;
 			children = (
@@ -110,14 +140,11 @@
 		F4FE4A87286DA6260005012D /* ProjectRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				F4D31F2C286E2FF50011B4F9 /* ViewModel */,
+				F4D31F2B286E2FBE0011B4F9 /* Model */,
+				F4D31F2A286E2FB30011B4F9 /* View */,
 				F4FE4A88286DA6260005012D /* ProjectRecorderApp.swift */,
-				F4FE4AB7286DA71B0005012D /* ProjectsView.swift */,
-				F4FE4ABB286DB3C20005012D /* ProjectViewModel.swift */,
-				F4FE4AB9286DABE90005012D /* Project.swift */,
-				F448FB1F286DDCCB00AEB2BA /* TimerManager.swift */,
 				F4FE4A8A286DA6260005012D /* ContentView.swift */,
-				F448FB21286DE1B500AEB2BA /* CalendarView.swift */,
-				F448FB23286DE1D400AEB2BA /* StatisticsView.swift */,
 				F4FE4A8C286DA6280005012D /* Assets.xcassets */,
 				F4FE4A91286DA6280005012D /* Persistence.swift */,
 				F4FE4A93286DA6280005012D /* ProjectRecorder.xcdatamodeld */,
@@ -285,6 +312,7 @@
 				F448FB24286DE1D400AEB2BA /* StatisticsView.swift in Sources */,
 				F448FB20286DDCCB00AEB2BA /* TimerManager.swift in Sources */,
 				F4FE4AB8286DA71B0005012D /* ProjectsView.swift in Sources */,
+				F4D31F29286E2DBE0011B4F9 /* StatisticsDetailView.swift in Sources */,
 				F4FE4A92286DA6280005012D /* Persistence.swift in Sources */,
 				F4FE4A95286DA6280005012D /* ProjectRecorder.xcdatamodeld in Sources */,
 				F448FB22286DE1B500AEB2BA /* CalendarView.swift in Sources */,
