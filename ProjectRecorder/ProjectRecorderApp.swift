@@ -11,9 +11,6 @@ import SwiftUI
 struct ProjectRecorderApp: App {
     let persistenceController = PersistenceController.shared
     
-    let test: Int = 15
-    let abc = 1
-    
     var body: some Scene {
         WindowGroup {
             TabView {

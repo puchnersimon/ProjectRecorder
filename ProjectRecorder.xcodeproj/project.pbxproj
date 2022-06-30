@@ -17,6 +17,8 @@
 		F4FE4AA9286DA6280005012D /* ProjectRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4AA8286DA6280005012D /* ProjectRecorderUITests.swift */; };
 		F4FE4AAB286DA6280005012D /* ProjectRecorderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4AAA286DA6280005012D /* ProjectRecorderUITestsLaunchTests.swift */; };
 		F4FE4AB8286DA71B0005012D /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4AB7286DA71B0005012D /* ProjectsView.swift */; };
+		F4FE4ABA286DABE90005012D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4AB9286DABE90005012D /* Project.swift */; };
+		F4FE4ABC286DB3C20005012D /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4ABB286DB3C20005012D /* ProjectViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		F4FE4AA8286DA6280005012D /* ProjectRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRecorderUITests.swift; sourceTree = "<group>"; };
 		F4FE4AAA286DA6280005012D /* ProjectRecorderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRecorderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4FE4AB7286DA71B0005012D /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		F4FE4AB9286DABE90005012D /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		F4FE4ABB286DB3C20005012D /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			children = (
 				F4FE4A88286DA6260005012D /* ProjectRecorderApp.swift */,
 				F4FE4AB7286DA71B0005012D /* ProjectsView.swift */,
+				F4FE4ABB286DB3C20005012D /* ProjectViewModel.swift */,
+				F4FE4AB9286DABE90005012D /* Project.swift */,
 				F4FE4A8A286DA6260005012D /* ContentView.swift */,
 				F4FE4A8C286DA6280005012D /* Assets.xcassets */,
 				F4FE4A91286DA6280005012D /* Persistence.swift */,
@@ -266,11 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FE4ABC286DB3C20005012D /* ProjectViewModel.swift in Sources */,
 				F4FE4AB8286DA71B0005012D /* ProjectsView.swift in Sources */,
 				F4FE4A92286DA6280005012D /* Persistence.swift in Sources */,
 				F4FE4A95286DA6280005012D /* ProjectRecorder.xcdatamodeld in Sources */,
 				F4FE4A8B286DA6260005012D /* ContentView.swift in Sources */,
 				F4FE4A89286DA6260005012D /* ProjectRecorderApp.swift in Sources */,
+				F4FE4ABA286DABE90005012D /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
