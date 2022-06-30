@@ -16,6 +16,7 @@
 		F4FE4A9F286DA6280005012D /* ProjectRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4A9E286DA6280005012D /* ProjectRecorderTests.swift */; };
 		F4FE4AA9286DA6280005012D /* ProjectRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4AA8286DA6280005012D /* ProjectRecorderUITests.swift */; };
 		F4FE4AAB286DA6280005012D /* ProjectRecorderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4AAA286DA6280005012D /* ProjectRecorderUITestsLaunchTests.swift */; };
+		F4FE4AB8286DA71B0005012D /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FE4AB7286DA71B0005012D /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		F4FE4AA4286DA6280005012D /* ProjectRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FE4AA8286DA6280005012D /* ProjectRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRecorderUITests.swift; sourceTree = "<group>"; };
 		F4FE4AAA286DA6280005012D /* ProjectRecorderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRecorderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4FE4AB7286DA71B0005012D /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FE4A88286DA6260005012D /* ProjectRecorderApp.swift */,
+				F4FE4AB7286DA71B0005012D /* ProjectsView.swift */,
 				F4FE4A8A286DA6260005012D /* ContentView.swift */,
 				F4FE4A8C286DA6280005012D /* Assets.xcassets */,
 				F4FE4A91286DA6280005012D /* Persistence.swift */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FE4AB8286DA71B0005012D /* ProjectsView.swift in Sources */,
 				F4FE4A92286DA6280005012D /* Persistence.swift in Sources */,
 				F4FE4A95286DA6280005012D /* ProjectRecorder.xcdatamodeld in Sources */,
 				F4FE4A8B286DA6260005012D /* ContentView.swift in Sources */,

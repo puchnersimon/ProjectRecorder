@@ -10,11 +10,29 @@ import SwiftUI
 @main
 struct ProjectRecorderApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            TabView {
+                ProjectsView()
+                    .tabItem {
+                        Label("Projects", systemImage: "list.bullet.rectangle.portrait")
+                    }
+                ProjectsView()
+                    .tabItem {
+                        Label("Calendar", systemImage: "calendar")
+                    }
+                ProjectsView()
+                    .tabItem {
+                        Label("Account", systemImage: "person")
+                    }
+            }
+            
+            
+            /*
+             ContentView()
+             .environment(\.managedObjectContext, persistenceController.container.viewContext)
+             */
         }
     }
 }
