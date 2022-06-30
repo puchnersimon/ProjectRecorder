@@ -13,6 +13,7 @@ struct ProjectsView: View {
     @ObservedObject var timerManager = TimerManager()
     
     @State var projectname = ""
+    @State var recordingDescription = ""
     
     var body: some View {
         NavigationView {
@@ -56,13 +57,19 @@ struct ProjectsView: View {
                                     .frame(width: 40, height: 40, alignment: .center)
                                     .onTapGesture {
                                         viewModel.toggleRecording(id: project.id)
-                                        if (project.isRecording == true) {
+                                        
+                                        
+                                        //start recording - stop recording !! converted --> project from ForEach could not change isRecording-status !!
+                                        if (project.isRecording == false) {
                                             timerManager.timerStart()
+                                        } else {
+                                            timerManager.timerStop()
+                                            saveRecordingAlert(id: project.id)
                                         }
                                     }
                                 if (project.isRecording == true) {
                                     Text(String(format: "%02d:%02d:%02d", timerManager.hours, timerManager.minutes, timerManager.seconds))
-                                    .foregroundColor(.gray)
+                                        .foregroundColor(.gray)
                                 }
                             }
                             .padding(.trailing, 10)
@@ -96,7 +103,7 @@ struct ProjectsView: View {
         let alert = UIAlertController(title: "Project", message: "add new project", preferredStyle: .alert)
         
         alert.addTextField() { (projectname) in
-            projectname.placeholder = "projectname"
+            projectname.placeholder = "projectname ..."
         }
         let add = UIAlertAction(title: "Add", style: .default) { (_) in
             projectname = alert.textFields![0].text!
@@ -113,6 +120,23 @@ struct ProjectsView: View {
         UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
     }
     
+    
+    func saveRecordingAlert(id: UUID) {
+        let alert = UIAlertController(title: "Save recording", message: "Description of the work", preferredStyle: .alert)
+        
+        alert.addTextField() { (projectname) in
+            projectname.placeholder = "description ..."
+        }
+        let save = UIAlertAction(title: "Save", style: .default) { (_) in
+            recordingDescription = alert.textFields![0].text!
+            print(recordingDescription)
+            //viewModel.addProject(projectname: projectname)
+        }
+        
+        alert.addAction(save)
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
+    }
     
 }
 

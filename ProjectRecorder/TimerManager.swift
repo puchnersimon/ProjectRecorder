@@ -28,4 +28,12 @@ class TimerManager: ObservableObject {
             }
         }
     }
+    
+    func timerStop() {
+        timer.invalidate()
+        self.seconds = 0
+        self.minutes = 0
+        self.hours = 0
+    }
+    
 }

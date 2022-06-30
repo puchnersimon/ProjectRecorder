@@ -9,7 +9,7 @@ import SwiftUI
 
 class ProjectViewModel: ObservableObject {
     @Published var projects: [Project] = [
-        Project(projectName: "IOS", symbol: Image(systemName: "applelogo")),
+        Project(projectName: "iOS", symbol: Image(systemName: "applelogo")),
         Project(projectName: "WIA", symbol: Image(systemName: "list.dash")),
         Project(projectName: "OIS", symbol: Image(systemName: "map")),
         Project(projectName: "HNP", symbol: Image(systemName: "hand.thumbsdown"))
@@ -37,6 +37,10 @@ class ProjectViewModel: ObservableObject {
                 projects[index].isRecording.toggle()
             }
         }
+    }
+    
+    func saveRecoding(id: UUID) {
+        
     }
     
 }
