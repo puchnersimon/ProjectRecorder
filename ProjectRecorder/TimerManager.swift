@@ -11,6 +11,7 @@ class TimerManager: ObservableObject {
     @Published var seconds = 0
     @Published var minutes = 0
     @Published var hours = 0
+    private let test = "abc1"
     var timer = Timer()
     
     func timerStart() {
