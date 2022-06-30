@@ -8,7 +8,14 @@
 import SwiftUI
 
 class ProjectViewModel: ObservableObject {
-    @Published var projects: [Project] = []
+    @Published var projects: [Project] = [
+        Project(ProjectName: "IOS", symbol: Image(systemName: "applelogo")),
+        Project(ProjectName: "WIA", symbol: Image(systemName: "list.dash")),
+        Project(ProjectName: "OIS", symbol: Image(systemName: "map")),
+        Project(ProjectName: "HNP", symbol: Image(systemName: "hand.thumbsdown"))
+    ]
+    
+    
     
     
     

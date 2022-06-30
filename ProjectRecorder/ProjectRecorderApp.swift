@@ -18,13 +18,13 @@ struct ProjectRecorderApp: App {
                     .tabItem {
                         Label("Projects", systemImage: "list.bullet.rectangle.portrait")
                     }
-                ProjectsView()
+                CalendarView()
                     .tabItem {
                         Label("Calendar", systemImage: "calendar")
                     }
-                ProjectsView()
+                StatisticsView()
                     .tabItem {
-                        Label("Account", systemImage: "person")
+                        Label("Statistics", systemImage: "align.vertical.bottom")
                     }
             }
             
