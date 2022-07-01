@@ -13,7 +13,8 @@ struct ProjectsView: View {
     @ObservedObject var timerManager = TimerManager()
     
     let imagesManager = ImagesManager()
-    @State var images:APIResult = APIResult()
+    @State var resultImages:APIResult = APIResult()
+    @State var images: [Image] = []
     
     @State var projectname = ""
     @State var recordingTime = ""
@@ -110,7 +111,7 @@ struct ProjectsView: View {
             print(error)
             guard let items = imageResult else{ return}
             print("test")
-            images = items
+            resultImages = items
         })
     }
     

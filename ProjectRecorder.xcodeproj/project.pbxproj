@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F2EFD14286E32160034E741 /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2EFD13286E32160034E741 /* ImagesManager.swift */; };
+		6F2EFD16286E33510034E741 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2EFD15286E33510034E741 /* ImageItem.swift */; };
 		F448FB20286DDCCB00AEB2BA /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448FB1F286DDCCB00AEB2BA /* TimerManager.swift */; };
 		F448FB22286DE1B500AEB2BA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448FB21286DE1B500AEB2BA /* CalendarView.swift */; };
 		F448FB24286DE1D400AEB2BA /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448FB23286DE1D400AEB2BA /* StatisticsView.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F2EFD13286E32160034E741 /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
+		6F2EFD15286E33510034E741 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		F448FB1F286DDCCB00AEB2BA /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		F448FB21286DE1B500AEB2BA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		F448FB23286DE1D400AEB2BA /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F2EFD12286E31250034E741 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6F2EFD13286E32160034E741 /* ImagesManager.swift */,
+				6F2EFD15286E33510034E741 /* ImageItem.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		F4D31F2A286E2FB30011B4F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 		F4FE4A87286DA6260005012D /* ProjectRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				6F2EFD12286E31250034E741 /* API */,
 				F4D31F2C286E2FF50011B4F9 /* ViewModel */,
 				F4D31F2B286E2FBE0011B4F9 /* Model */,
 				F4D31F2A286E2FB30011B4F9 /* View */,
@@ -311,12 +325,14 @@
 				F4FE4ABC286DB3C20005012D /* ProjectViewModel.swift in Sources */,
 				F448FB24286DE1D400AEB2BA /* StatisticsView.swift in Sources */,
 				F448FB20286DDCCB00AEB2BA /* TimerManager.swift in Sources */,
+				6F2EFD14286E32160034E741 /* ImagesManager.swift in Sources */,
 				F4FE4AB8286DA71B0005012D /* ProjectsView.swift in Sources */,
 				F4D31F29286E2DBE0011B4F9 /* StatisticsDetailView.swift in Sources */,
 				F4FE4A92286DA6280005012D /* Persistence.swift in Sources */,
 				F4FE4A95286DA6280005012D /* ProjectRecorder.xcdatamodeld in Sources */,
 				F448FB22286DE1B500AEB2BA /* CalendarView.swift in Sources */,
 				F4FE4A8B286DA6260005012D /* ContentView.swift in Sources */,
+				6F2EFD16286E33510034E741 /* ImageItem.swift in Sources */,
 				F4FE4A89286DA6260005012D /* ProjectRecorderApp.swift in Sources */,
 				F4FE4ABA286DABE90005012D /* Project.swift in Sources */,
 			);
