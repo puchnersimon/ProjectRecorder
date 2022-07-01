@@ -12,6 +12,9 @@ struct ProjectsView: View {
     @ObservedObject var viewModel = ProjectViewModel()
     @ObservedObject var timerManager = TimerManager()
     
+    let imagesManager = ImagesManager()
+    @State var images:APIResult = APIResult()
+    
     @State var projectname = ""
     @State var recordingTime = ""
     @State var recordingDescription = ""
@@ -88,13 +91,27 @@ struct ProjectsView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
+                        
+                        getImages()
                         addProjectAlert()
+                        
                     } label: {
                         Image(systemName: "plus")
                     }
                 }
             }
         }
+    }
+    
+    func getImages(){
+        
+        
+        imagesManager.requestImages(search: "London", completion: { imageResult, error in
+            print(error)
+            guard let items = imageResult else{ return}
+            print("test")
+            images = items
+        })
     }
     
     func delete(at offsets: IndexSet) {
